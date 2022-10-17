@@ -4,4 +4,15 @@
 # - 0,56 -> 11
 
 print('Введите число:')
-num = float (input())
+num = float(input())
+length = len(str(num))
+i = 0
+b = 0
+c = 0
+while i < length:
+    i = i + 1
+    num = num / 10
+    b = num % 10
+    c = c + b
+print(int(c))
+
