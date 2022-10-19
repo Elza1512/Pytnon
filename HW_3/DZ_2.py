@@ -5,30 +5,16 @@
 #     - [2, 3, 5, 6] => [12, 15]
 
 mylist = [2, 3, 4, 5, 6]
-max = abs(mylist[0])
-min = abs(mylist[-1])
-for i in range(0, 5):
-    if max < abs(mylist[i]):
-        max = abs(mylist[i])
-    if min > abs(mylist[i]):
-        min = abs(mylist[i])
-d = round(max * min)
-print(d)
+for i in range(len(mylist)):
+    if len(mylist) > 1:
+        max = (mylist[0])
+        min = (mylist[-1])
+        mylist.pop(0)
+        mylist.pop(-1)
+        d = round(max * min)
+    else:
+        max = mylist[0]
+        mylist.pop(0)
+        d = round(max * max)
+    print(d)
 
-
-# myList = [2, 3, 4, 5, 6]
-# print(myList[0], myList[-1])
-# # print(myList)
-# l = len(myList)
-# elem = []
-# for i in range(l):
-#     if (l // 2 + 1):
-#         elem.append(myList[i])
-# print("Список", myList)
-# list_length = len(elem)
-# prElements = 0
-# arr = 1
-# for i in range(list_length):
-#     prElements *= i
-#     # prElements = prElements * elem[i]
-# print("Произведение пар чисел: ", prElements)
